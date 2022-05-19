@@ -14,3 +14,13 @@ steps:
         'gcr.io/beaming-key-350612/test-project:$SHORT_SHA',
       ]
   
+- name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      [
+        'beta',
+        'run',
+        'deploy',
+        'test-projec',
+        '--image=gcr.io/beaming-key-350612/test-projec:$SHORT_SHA',
+        '--region=us-central1',
+      ]
